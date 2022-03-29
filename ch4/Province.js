@@ -1,11 +1,13 @@
-class Province {
+const Producer = require("./Producer");
+
+module.exports = class Province {
   constructor(doc) {
     this._name = doc.name;
     this._producers = [];
     this._totalProduction = 0;
     this._demand = doc.demand;
     this._price = doc.price;
-    doc._producers.forEach((d) => this.addProducer(new Producer(this, d)));
+    doc.producers.forEach((d) => this.addProducer(new Producer(this, d)));
   }
 
   addProducer(arg) {
@@ -65,4 +67,4 @@ class Province {
       });
     return result;
   }
-}
+};

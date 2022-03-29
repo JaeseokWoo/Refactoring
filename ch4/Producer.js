@@ -1,4 +1,4 @@
-class Producer {
+module.exports = class Producer {
   constructor(aProvince, data) {
     this._province = aProvince;
     this._cost = data.cost;
@@ -24,4 +24,4 @@ class Producer {
     this._province.totalProduction += newProduction - this._production;
     this._production = newProduction;
   }
-}
+};

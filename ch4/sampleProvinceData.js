@@ -1,4 +1,4 @@
-function sampleProvinceData() {
+module.exports = function sampleProvinceData() {
   return {
     name: "Asia",
     producers: [
@@ -9,4 +9,4 @@ function sampleProvinceData() {
     demand: 30,
     price: 20,
   };
-}
+};
